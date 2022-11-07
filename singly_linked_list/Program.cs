@@ -50,6 +50,20 @@ namespace singly_linked_list
             Node previous, current;
             previous = START;
             current = START;
+
+            while ((current != null) && (rollNo >= current.rollNumber))
+            {
+                if (rollNo == current.rollNumber)
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                previous.next = current;
+                previous.next = newnode;
+            }
+            previous.next = current;
+            previous.next = newnode;
+        }
         public bool delNode(int rollNo)
         {
             Node previous, current;
