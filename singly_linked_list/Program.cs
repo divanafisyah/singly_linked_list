@@ -1,4 +1,5 @@
-﻿using System;
+﻿using singly_linked_list;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -157,7 +158,16 @@ namespace singly_linked_list
                         break;
                     case '4':
                         {
-
+                            if(obj.listEmpty() == true)
+                            {
+                                Console.WriteLine("\nList is empty");
+                                break;
+                            }
+                            Node previous, current;
+                            previous = current = null;
+                            Console.WriteLine("\nEnter roll number of the" + "Student whole record is to be searched:");
+                            int num = Convert.ToInt32(Console.ReadLine());
+                            if (obj.Search(num, ref previous, ref current))
                         }
                         break;
                     case '5':
