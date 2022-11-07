@@ -111,15 +111,15 @@ namespace singly_linked_list
         }
     }
     }
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
         List obj = new List();
-            while(true)
+        while (true)
+        {
+            try
             {
-                try
-                {
                 Console.WriteLine("\nMENU");
                 Console.WriteLine("1. Add a record to the list");
                 Console.WriteLine("2. Delete a record to the list");
@@ -128,7 +128,7 @@ namespace singly_linked_list
                 Console.WriteLine("5. EXIT");
                 Console.Write("\nEnter your choice (1-5):");
                 char ch = Convert.ToChar(Console.ReadLine());
-                switch(ch)
+                switch (ch)
                 {
                     case '1':
                         {
@@ -137,7 +137,7 @@ namespace singly_linked_list
                         break;
                     case '2':
                         {
-                            if(obj.listEmpty())
+                            if (obj.listEmpty())
                             {
                                 Console.WriteLine("\nList is empty");
                                 break;
@@ -158,7 +158,7 @@ namespace singly_linked_list
                         break;
                     case '4':
                         {
-                            if(obj.listEmpty() == true)
+                            if (obj.listEmpty() == true)
                             {
                                 Console.WriteLine("\nList is empty");
                                 break;
@@ -167,18 +167,31 @@ namespace singly_linked_list
                             previous = current = null;
                             Console.WriteLine("\nEnter roll number of the" + "Student whole record is to be searched:");
                             int num = Convert.ToInt32(Console.ReadLine());
-                            if (obj.Search(num, ref previous, ref current))
+                            if (obj.Search(num, ref previous, ref current) == false)
+                                Console.WriteLine("\nRecord not found");
+                            else
+                            {
+                                Console.WriteLine("\n Record nor found");
+                                Console.WriteLine("\n Roll number :" + current.rollNumber);
+                                Console.WriteLine("\nName: " + current.name);
+                            }
                         }
                         break;
                     case '5':
+                        return;
+                    default:
                         {
-
+                            Console.WriteLine("\nInvalid option");
                         }
                         break;
                 }
             }
-            catch(ch)
+            catch (Exception)
             {
+                Console.WriteLine("\n Check for the value");
+            }
         }
+    }
+}
 
 
