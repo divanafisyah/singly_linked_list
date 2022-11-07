@@ -124,7 +124,48 @@ namespace singly_linked_list
                 Console.WriteLine("3. View all the records in the list");
                 Console.WriteLine("4. Search for a record in the list");
                 Console.WriteLine("5. EXIT");
+                Console.Write("\nEnter your choice (1-5):");
+                char ch = Convert.ToChar(Console.ReadLine());
+                switch(ch)
+                {
+                    case '1':
+                        {
+                            obj.addNote();
+                        }
+                        break;
+                    case '2':
+                        {
+                            if(obj.listEmpty())
+                            {
+                                Console.WriteLine();
+                                break;
+                            }
+                            Console.WriteLine();
+                            if ()
+                                Console.WriteLine();
+                            else
+                        }
+                        break;
+                    case '3':
+                        {
+
+                        }
+                        break;
+                    case '4':
+                        {
+
+                        }
+                        break;
+                    case '5':
+                        {
+
+                        }
+                        break;
+                }
             }
+            catch(ch)
+            {
         }
-        }
+
     }
+
