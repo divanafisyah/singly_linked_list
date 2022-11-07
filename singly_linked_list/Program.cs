@@ -184,12 +184,6 @@ class Program
                             Console.WriteLine("\nInvalid option");
                         }
                         break;
-                }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("\n Check for the value");
-            }
         }
     }
 }
