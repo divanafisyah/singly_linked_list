@@ -122,8 +122,8 @@ namespace singly_linked_list
                 Console.WriteLine("1. Add a record to the list");
                 Console.WriteLine("2. Delete a record to the list");
                 Console.WriteLine("3. View all the records in the list");
-                Console.WriteLine("");
-                Console.WriteLine("");
+                Console.WriteLine("4. Search for a record in the list");
+                Console.WriteLine("5. EXIT");
             }
         }
         }
