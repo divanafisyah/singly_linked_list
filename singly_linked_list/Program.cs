@@ -135,22 +135,6 @@ class Program
                             obj.addNote();
                         }
                         break;
-                    case '2':
-                        {
-                            if (obj.listEmpty())
-                            {
-                                Console.WriteLine("\nList is empty");
-                                break;
-                            }
-                            Console.WriteLine("Enter the roll number of" + "the student whose is to be deleted");
-                            int rollNo = Convert.ToInt32(Console.ReadLine());
-                            Console.WriteLine();
-                            if (obj.delNode(rollNo) == false)
-                                Console.WriteLine("\nRecord not found");
-                            else
-                                Console.WriteLine("\nRecord with roll number" + rollNo + "Deleted");
-                        }
-                        break;
                     case '3':
                         {
                             obj.Traverse();
@@ -184,6 +168,12 @@ class Program
                             Console.WriteLine("\nInvalid option");
                         }
                         break;
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("\n Check for the value");
+            }
         }
     }
 }
