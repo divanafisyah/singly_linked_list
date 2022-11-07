@@ -50,20 +50,6 @@ namespace singly_linked_list
             Node previous, current;
             previous = START;
             current = START;
-
-            while ((current != null) && (rollNo >= current.rollNumber))
-            {
-                if (rollNo == current.rollNumber)
-                {
-                    Console.WriteLine();
-                    return;
-                }
-                previous.next = current;
-                previous.next = newnode;
-            }
-            previous.next = current;
-            previous.next = newnode;
-        }
         public bool delNode(int rollNo)
         {
             Node previous, current;
@@ -133,6 +119,22 @@ class Program
                     case '1':
                         {
                             obj.addNote();
+                        }
+                        break;
+                    case '2':
+                        {
+                            if (obj.listEmpty())
+                            {
+                                Console.WriteLine("\nList is empty");
+                                break;
+                            }
+                            Console.WriteLine("Enter the roll number of" + "the student whose is to be deleted");
+                            int rollNo = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine();
+                            if (obj.delNode(rollNo) == false)
+                                Console.WriteLine("\nRecord not found");
+                            else
+                                Console.WriteLine("\nRecord with roll number" + rollNo + "Deleted");
                         }
                         break;
                     case '3':
