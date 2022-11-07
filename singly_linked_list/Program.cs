@@ -113,5 +113,18 @@ namespace singly_linked_list
     {
         static void Main(string[] args)
         {
+        List obj = new List();
+            while(true)
+            {
+                try
+                {
+                Console.WriteLine("\nMENU");
+                Console.WriteLine("1. Add a record to the list");
+                Console.WriteLine("2. Delete a record to the list");
+                Console.WriteLine("3. View all the records in the list");
+                Console.WriteLine("");
+                Console.WriteLine("");
+            }
+        }
         }
     }
