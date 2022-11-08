@@ -40,13 +40,14 @@ namespace singly_linked_list
             {
                 if((START != null) && (rollNo == START.rollNumber))
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
                 }
                 newnode.next = START;
                 START = newnode;
                 return;
             }
+            //locate the position of the new node in the list
             Node previous, current;
             previous = START;
             current = START;
@@ -55,13 +56,14 @@ namespace singly_linked_list
             {
                 if (rollNo == current.rollNumber)
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
                     return;
                 }
                 previous.next = current;
-                previous.next = newnode;
+                current = current.next;
             }
-            previous.next = current;
+            /*Once the above for loop is executed, prev and current are postioned in such a manner that the position for the new node*/
+            newnode.next = current;
             previous.next = newnode;
         }
         public bool delNode(int rollNo)
